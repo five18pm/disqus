@@ -1,9 +1,7 @@
-require 'disqus/version'
-
 spec = Gem::Specification.new do |s|
 
   s.name              = "disqus"
-  s.version           = Disqus::Version::STRING
+  s.version           = "1.0.5"
   s.rubyforge_project = "disqus"
   s.authors           = ['Norman Clarke', 'Matthew Van Horn']
   s.email             = ['norman@njclarke.com', 'mattvanhorn@gmail.com']
