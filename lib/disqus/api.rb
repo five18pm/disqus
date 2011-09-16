@@ -38,7 +38,7 @@ module Disqus
   # forum. The creator of a forum can get the forum's key through the API.
   class Api
     
-    ROOT = 'http://disqus.com/api'
+    ROOT = 'https://disqus.com/api'
     API_VERSION = '1.1'
   
     class << self
@@ -213,7 +213,7 @@ module Disqus
       # API. This is different from the other widgets in that you can specify
       # the thread identifier being commented on.
       def comment_form(forum_shortname, thread_identifier)
-        url = 'http://disqus.com/api/reply.js?' + 
+        url = 'https://disqus.com/api/reply.js?' + 
           "forum_shortname=#{escape(forum_shortname)}&" + 
           "thread_identifier=#{escape(thread_identifier)}"
         s = '<div id="dsq-reply">'

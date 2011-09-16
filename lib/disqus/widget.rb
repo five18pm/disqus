@@ -15,7 +15,7 @@ module Disqus
     VALID_AVATAR_SIZES = [24, 32, 48, 92, 128]
     VALID_ORIENTATIONS = ['horizontal', 'vertical']
 
-    ROOT_PATH = 'http://disqus.com/forums/%s/'
+    ROOT_PATH = 'https://disqus.com/forums/%s/'
     THREAD = ROOT_PATH + 'embed.js'
     COMBO = ROOT_PATH + 'combination_widget.js?num_items=%d&color=%s&default_tab=%s'
     RECENT = ROOT_PATH + 'recent_comments_widget.js?num_items=%d&avatar_size=%d'
@@ -36,11 +36,11 @@ module Disqus
         end
         s << '<div id="disqus_thread"></div>'
         s << '<script type="text/javascript" src="' + THREAD + '"></script>'
-        s << '<noscript><a href="http://%s.disqus.com/?url=ref">'
+        s << '<noscript><a href="https://%s.disqus.com/?url=ref">'
         s << opts[:view_thread_text]
         s << '</a></noscript>'
         if opts[:show_powered_by]
-          s << '<a href="http://disqus.com" class="dsq-brlink">blog comments '
+          s << '<a href="https://disqus.com" class="dsq-brlink">blog comments '
           s << 'powered by <span class="logo-disqus">Disqus</span></a>'
         end
         s % [opts[:account], opts[:account]]
@@ -100,7 +100,7 @@ module Disqus
         s << '"></script>'
         s << '</div>'
         if opts[:show_powered_by]
-          s << '<a href="http://disqus.com">Powered by Disqus</a>'
+          s << '<a href="https://disqus.com">Powered by Disqus</a>'
         end
         s % [opts[:account], opts[:num_items], opts[:avatar_size], opts[:orientation]]
       end
@@ -122,7 +122,7 @@ module Disqus
         s << '&hide_mods=1' if opts[:hide_mods]
         s << '"></script>'
         s << '</div>'
-        s << '<a href="http://disqus.com">Powered by Disqus</a>' if opts[:show_powered_by]
+        s << '<a href="https://disqus.com">Powered by Disqus</a>' if opts[:show_powered_by]
         s % [opts[:account], opts[:num_items]]
       end
     
@@ -145,7 +145,7 @@ module Disqus
         s << '"></script>'
         s << '</div>'
         if opts[:show_powered_by]
-          s << '<a href="http://disqus.com">Powered by Disqus</a>'
+          s << '<a href="https://disqus.com">Powered by Disqus</a>'
         end
         s % [opts[:account], opts[:num_items], opts[:avatar_size]]
       end
